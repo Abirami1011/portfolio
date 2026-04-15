@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abirami M | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Abirami's Portfolio</h2>
+
+        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+
+        <ul id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+
+        <!-- LEFT: IMAGE -->
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Abirami Profile">
+            </div>
+
+        <!-- RIGHT: CONTENT -->
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Abirami M</span></h1>
+                <p>Python Developer • Java Developer • Website Developer</p>
+
+                <div class="btn-group">
+                    <a href="https://github.com/Abirami1011" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/abirami-murugan-020595265" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate AI and Data Science Engineer with hands-on experience in Java Full Stack Development. Skilled in Python, Java, Machine Learning, and Web Development, with a strong interest in building efficient and user-friendly applications. I have worked on projects involving AI, deep learning, and web technologies, gaining practical problem-solving and development experience. I am eager to contribute to innovative projects in AI, software development, and data-driven solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>MySQL</li>
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence</li>
+        </ul>
+    </section>
+
+    <section id="internships">
+        <h2>Internships</h2>
+        <div class="card">
+            <h3>Tech Mahindra Limited</h3>
+            <p class="meta-line">
+                📍 Electronic City, Bengaluru | 📅 Oct 2025 – Dec 2025 | ⏳ 2.5 Months (10 Weeks)
+            </p>
+                <p><b>Role:</b> AI & Software Development Intern</p>
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>Built CNN model for semiconductor defect detection</li>
+                    <li>Developed preprocessing and training pipeline</li>
+                    <li>Improved accuracy and reduced manual inspection</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <h3>Tap Academy</h3>
+            <p class="meta-line">
+                    📍 BTM Layout, Bengaluru | 📅 June 2025 – Dec 2025 | ⏳ 6 Months
+                </p>
+                <p><b>Role:</b> Java Full Stack Developer Intern</p>
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>Developed full-stack web applications using Java, HTML, CSS, JavaScript, and MySQL.</li>
+                    <li>Worked on front-end design and backend integration.</li>
+                    <li>Explored AI integration in web applications.</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <h3>CVRDE - DRDO</h3>
+            <p class="meta-line">
+                    📍 CVRDE - DRDO, Chennai | 📅 Feb 2025 – Mar 2025 | ⏳ 2 Months
+                </p>
+                <p><b>Role:</b> Data Science & AI Intern</p>
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>Implemented CNN-based thermal image analysis for MRTD measurement.</li>
+                    <li>Processed and analyzed image datasets using Python and OpenCV.</li>
+                    <li>Improved accuracy of automated thermal evaluation systems.</li>
+                </ul>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+
+            <div class="project-card" onclick="openProject('p1')" style="background-image: url('images/towels.jpg');">
+                <div class="overlay">
+                    <h3>SK Tex Towel Shop</h3>
+                    <p>Static Website</p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openProject('p2')" style="background-image: url('images/payment.jpg');">
+                <div class="overlay">
+                    <h3>API Payment Gateway</h3>
+                    <p>Dynamic E-Commerce Website</p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openProject('p3')" style="background-image: url('images/spam-ai.jpg');">
+                <div class="overlay">
+                    <h3>AI Spam Classifier</h3>
+                    <p>Machine Learning Project</p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openProject('p4')" style="background-image: url('images/tanker.jpg');">
+                <div class="overlay">
+                    <h3>MRTD Measurement using CNN</h3>
+                    <p>Deep Learning Project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL (POPUP) -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeProject()" style="cursor:pointer;">❌</span>
+
+    <div id="p1" class="project-detail">
+
+        <h2>🧺 SK Tex Towel Shop</h2>
+
+        <p class="tag blue">🌐 Frontend Project</p>
+            <div class="project-info">
+                <p><strong>📍 Where:</strong> Self-Initiated Project</p>
+                <p><strong>📅 When:</strong> May 2023 (1 Month)</p>
+                <p><strong>💡 Type:</strong> Real-Time Project</p>
+            </div>
+            <p><strong>Key Contributions:</strong></p>
+             <ul>
+                <li>Designed and developed a responsive towel shop website</li>
+                <li>Built clean UI using HTML, CSS, and Bootstrap</li>
+                <li>Created user-friendly product display layout</li>
+            </ul>
+
+            <a href="https://www.sktex.000webhostapp.com" target="_blank" class="btn">
+            🔗 View Project
+            </a>
+
+    </div>
+
+    <div id="p2" class="project-detail">
+
+        <h2>💳 API Payment Gateway</h2>
+
+        <p class="tag blue">🌐 Full Stack Project</p>
+
+        <div class="project-info blue-box">
+            <p><strong>📍 Where:</strong> Livewire Internship</p>
+            <p><strong>📅 When:</strong> 2023</p>
+            <p><strong>💡 Type:</strong> Internship Project</p>
+        </div>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+            <li>Developed dynamic e-commerce website using MERN stack</li>
+            <li>Integrated secure online payment system (Stripe API)</li>
+            <li>Handled backend operations and database management</li>
+        </ul>
+
+    </div>
+
+    <div id="p3" class="project-detail">
+
+        <h2>🤖 AI Spam Classifier</h2>
+
+        <p class="tag red">🧠 Machine Learning Project</p>
+
+        <div class="project-info green-box">
+            <p><strong>📍 Where:</strong> Naan Mudhalvan Project</p>
+            <p><strong>📅 When:</strong> 2024</p>
+            <p><strong>💡 Type:</strong> Academic Project</p>
+        </div>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+            <li>Developed intelligent spam detection system using machine learning</li>
+            <li>Implemented algorithms like Naïve Bayes and SVM for classification</li>
+            <li>Processed and trained model using real-world email datasets</li>
+        </ul>
+
+    </div>
+
+    <div id="p4" class="project-detail">
+
+        <h2>🔥 MRTD Measurement using CNN</h2>
+
+        <p class="tag red">🧠 Deep Learning Project</p>
+
+        <div class="project-info red-box">
+            <p><strong>📍 Where:</strong> DRDO Internship</p>
+            <p><strong>📅 When:</strong> 2024</p>
+            <p><strong>💡 Type:</strong> Internship Project (Real - Time)</p>
+            <p><strong>👨‍🏫 Mentor:</strong> Arun Sundhar, Senior AI Scientist, CVRDE - DRDO</p>
+        </div>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+            <li>Developed CNN-based system for thermal image analysis</li>
+            <li>Automated MRTD (Minimum Resolvable Temperature Difference) measurement</li>
+            <li>Processed infrared image datasets using Python and OpenCV</li>
+            <li>Improved accuracy compared to manual evaluation methods</li>
+        </ul>
+
+    </div>
+    </div>
+    </div>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+
+        <div class="achievement-container">
+
+            <div class="badge gold">
+                <h3>🥇 1st Prize</h3>
+                <p><b>Front-End Project - Ticket Booking</b></p>
+                <p class="meta-line">
+                    📍 Vivekanandha College of Engineering for Women, Namakkal District | 📅 2023
+                </p>
+            </div>
+
+            <div class="badge silver">
+                <h3>🥈 2nd Prize</h3>
+                <p><b>Paper Presentation (Machine Learning)</b> </p>
+                <p class="meta-line">
+                    📍 AVS College of Technology, Salem District | 📅 2023
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+        <i class="fa-solid fa-envelope"></i>
+        <b>Email:</b> <a href="mailto:abiramimurugan7570@gmail.com">abiramimurugan7570@gmail.com</a>
+        </p>
+
+        <p>
+        <i class="fa-solid fa-phone"></i>
+        <b>Phone:</b> <a href="tel:8667447570">+91 8667447570</a>
+        </p>
+
+        <p>
+        <i class="fa-solid fa-location-dot"></i>
+        <b>Location:</b> Salem
+        </p>
+    </section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
